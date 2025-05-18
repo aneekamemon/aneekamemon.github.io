@@ -130,7 +130,7 @@ html, body {
 
     color:var(--text--color);
     font-style: italic;
-    position: absolute;
+    position: relative;
     z-index: 2;
     white-space: nowrap;
     overflow: hidden;
