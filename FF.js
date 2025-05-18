@@ -88,13 +88,13 @@ function themeforthewebpage() {
         // This part makes sure if the chosen theme is dark
         // if it is then it will show the light mode sticker so the user can click that
         // if they want to change the theme
-        themestickersFROST.image ='stickers/lightmode.png';
+        themestickersFROST.src ='stickers/lightmode.png';
 
     }   else {  
         document.documentElement.setAttribute('data-theme', 'light');
         // if not then the theme stays on light mode and the image shown will be the dark mode on
         // encouraging the user to change between them 
-        themestickersFROST.image ='stickers/darkmode.png';
+        themestickersFROST.src ='stickers/darkmode.png';
     }
 }
 
@@ -108,13 +108,13 @@ themeFROST.addEventListener('click', () => {
 
         // if there is a click on the darkmode sticker then the theme changes to light
         localStorage.setItem('theme', 'light');
-        themestickersFROST.image = 'stickers/darkmode.png';
+        themestickersFROST.src = 'stickers/darkmode.png';
 
     }   else {
         document.documentElement.setAttribute('data-theme', 'dark');
         // If not then it stays the same and displays the lightmode sticker
         localStorage.setItem('theme', 'dark');
-        themestickersFROST.image = 'stickers/lightmode.png';
+        themestickersFROST.src = 'stickers/lightmode.png';
 
     }
 });
@@ -125,10 +125,10 @@ window.matchMedia('(userpicks: dark)').addEventListener('change', (yurp) => {
     if (!localStorage.getItem('theme')) {
         if (yurp.matches) {
             document.documentElement.setAttribute('data-theme', 'dark');
-            themestickersFROST.image = 'lightmode.png';
+            themestickersFROST.src = 'lightmode.png';
         }   else {
             document.documentElement.removeAttribute('data-theme');
-            themestickersFROST.image = 'lightmode.png';
+            themestickersFROST.src = 'lightmode.png';
         }
     }
 });
